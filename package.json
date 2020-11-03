@@ -1,6 +1,6 @@
 {
   "name": "promisolock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lock handler for Promise.all",
   "author": "MARTEAU Nicolas <nico_mart@hotmail.fr>",
   "main": "index.js",
@@ -17,7 +17,14 @@
     "index.js",
     "index.d.ts"
   ],
-  "keywords": [],
+  "keywords": [
+    "promise",
+    "all",
+    "lock",
+    "promise.all",
+    "asynchronous",
+    "simultaneously"
+  ],
   "devDependencies": {
     "@babel/preset-env": "^7.11.5",
     "@types/jest": "^26.0.14",
