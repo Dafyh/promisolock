@@ -1,0 +1,17 @@
+name: Codecov
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Test
+      run: npm run test
+
+    - uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true

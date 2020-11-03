@@ -1,0 +1,8 @@
+coverage:
+  parsers:
+    javascript:
+      enable_partials: yes
+  status:
+    patch:
+      default:
+        target: 100%
