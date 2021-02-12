@@ -25,15 +25,18 @@ promisolock(2).all([
 ]).then(console.log).catch(console.error);
 //=> ["P1", "P2", "P3", "P4"]
 
-(function () {
+async function main() {
 
- const array = ["P1", "P2", "P3", "P4"];
- await promisolock().all(
-  array.map((str) => () => Promise.resolve(str))
- )
- //=> ["P1", "P2", "P3", "P4"]
+  await promisolock(3)
+    .all(["P1", "P2", "P3", "P4"].map((str) => () => Promise.resolve(str)))
+    .then(console.log)
+    .catch(console.error);
 
-}());
+};
+
+main();
+//=> ["P1", "P2", "P3", "P4"]
+
 ```
 
 ## API
